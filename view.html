@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script type="text/javascript" lang="javascript" src="binarysearch.js"></script>
+        <script type="text/javascript" lang="javascript" src="controller.js"></script>
+    </head>
+    <body>
+        <h1>Address locator</h1>
+        <div>
+            <table>
+                <tr>
+                    <td>Fornavn</td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Etternavn</td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Gate</td>
+                    <td><input type="text" id="gate" onchange="gateWasChanged()" list="gatesList"/>
+                        <datalist id="gatesList" onclick="gateWasSelected()">                           
+                        </datalist>
+                    </td>
+                    <td>Nr</td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Postnr</td>
+                    <td><input type="text" maxlength="4" id="zipCode" onblur="zipCodeAdded()"></td>
+                    <td>Sted</td>
+                    <td><input type="text" id="sted"/></td>
+                </tr>
+                <tr>
+                    <td id="errorText" colspan="4" style="color:red; display:none;"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
