@@ -65,5 +65,5 @@ function zipCodeComparator(currentElement, searchElement) {
     if (currentElement.nr == searchElement) {
         return 0;
     }
-    return -1;
+    return parseInt(currentElement.nr) - parseInt(searchElement);
 };
